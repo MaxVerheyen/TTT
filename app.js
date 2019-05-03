@@ -1,15 +1,15 @@
-var express = require('express');
-var passport = require('passport');
-var util = require('util');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var GitHubStrategy = require('passport-github2').Strategy;
-var partials = require('express-partials');
+const express = require('express');
+const passport = require('passport');
+const util = require('util');
+const session = require('express-session');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+const GitHubStrategy = require('passport-github2').Strategy;
+const partials = require('express-partials');
 
 
-var GITHUB_CLIENT_ID = "1f2cd0184a10bc034fc2";
-var GITHUB_CLIENT_SECRET = "e675fded94adb87ebfae10a73ea62ac6c8da9812";
+const GITHUB_CLIENT_ID = "1f2cd0184a10bc034fc2";
+const GITHUB_CLIENT_SECRET = "e675fded94adb87ebfae10a73ea62ac6c8da9812";
 
 
 // Passport session setup.
@@ -53,7 +53,7 @@ passport.use(new GitHubStrategy({
 
 
 
-var app = express();
+const app = express();
 
 // configure Express
 app.set('views', __dirname + '/views');
